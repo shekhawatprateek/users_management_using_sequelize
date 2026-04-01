@@ -1,0 +1,51 @@
+###
+
+POST http://localhost:8000/v1/user/register
+Content-Type: application/json
+
+{
+    "name": "test123",
+    "email": "prateekshekhawat7@gmail.com",
+    "password": "password"
+}
+
+#  "profileImage": "",
+#     "role": "",
+#     "isVerified": ""
+
+###
+GET http://localhost:8000/v1/user/verify?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImlhdCI6MTc3NDk4MTU1NywiZXhwIjoxNzc0OTg1MTU3fQ.1gn_YtrMD_X0bh3F9I50BdlYTkhDNVl2qKhbBG497Xk
+Content-Type: application/json
+
+###
+
+POST http://localhost:8000/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "prateekshekhawat7@gmail.com",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:8000/v1/user/forgot-password
+Content-Type: application/json
+
+{
+    "email": "prateekshekhawat7@gmail.com"
+}
+
+###
+
+POST http://localhost:8000/v1/user/reset-password/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTksImlhdCI6MTc3NDk4NTEyOCwiZXhwIjoxNzc0OTg2MDI4fQ.3ApUxgUxUrOolRkdRWIbYC5MFTWGDpPxht8FCFJdqdE
+Content-Type: application/json
+
+{
+    "newPassword": "mypassword"
+}
+
+
+###
+GET http://localhost:8000/v1/user/
+

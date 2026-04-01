@@ -1,16 +1,15 @@
 const {body} = require('express-validator')
 
 
-// validations.js
 const validateRegistration = [
     body('email').isEmail().withMessage("Invalid email"),
-    body('password').isLength({ min: 6 }),
+    body('password').isLength({ min: 6 }).notEmpty().withMessage("Password is required"),
     body('name').notEmpty()
 ];
 
 const validateLogin = [
     body('email').isEmail().withMessage("Please provide a valid email"),
-    body('password').notEmpty().withMessage("Password is required")
+    body('password').isLength({ min: 6 }).notEmpty().withMessage("Password is required")
 ];
 
 const validateForgotPassword = [
